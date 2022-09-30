@@ -59,6 +59,17 @@ footer {
   text-align: center;
   color: white;
 }
+  /* Style the playlist */
+  #playlist{
+           list-style: none;
+      }
+      #playlist li a{
+           color:black;
+           text-decoration; none;
+      } 
+      #playlist .current-song a{
+           color:blue;
+      }  
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
@@ -95,19 +106,7 @@ footer {
     <p>subukan kong pagandahin sa mga susunod na araw ayus ba.</p>
     
     <!-- /.song pluggins -->
-    <style>
-      #playlist{
-           list-style: none;
-      }
-      #playlist li a{
-           color:black;
-           text-decoration; none;
-      } 
-      #playlist .current-song a{
-           color:blue;
-      }  
-    </style>  
-    
+ 
     <audio scr="" controls id="audioPlayer">
      Sorry, Your browser doesn't support html5!
     </audio>
