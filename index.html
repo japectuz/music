@@ -3,8 +3,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML5 Audio Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Japectuz</title>
     <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: left;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
         #playlist{
             list-style: none;
         }
@@ -15,17 +70,27 @@
         #playlist .current-song a{
             color:blue;
         }
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
     </style>
-    <!-- Source Code From YouTube.com/MicroTechTutorials  you may remove this message on your webpage but please do not redistribtue -->
+    
+    
 </head>
+    
+    
 <body>
-    <p>Demo Music From <a href="http://incompetech.com">incompetech.com</a></p>
+    <!-- playlist -->
     <audio src="" controls id="audioPlayer">
         Sorry, your browser doesn't support html5!
     </audio>
     <ul id="playlist">
-        <li class="current-song"><a href="bruno_mars_all_i_ask.m4a">All I Ask - Bruno Mars</a></li>
-        <li><a href="Severe%20Tire%20Damage.mp3">Verscae on the floor - Bruno Mars</a></li>
+        <li class="current-song"><a href="/music/song/bruno_mars_all_i_ask.m4a">All I Ask - Bruno Mars</a></li>
+        <li><a href="Severe%20Tire%20Damage.mp3">Versace on the floor - Bruno Mars</a></li>
         <li><a href="Broken%20Reality.mp3">Broken Reality</a></li>
     </ul>
     <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
